@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "e601e895-5d80-435a-8df9-089a0169f6e4",
+		"name": "Luvina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10889824"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "luvina",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibHV2aW5hIiwiZXhwIjoxNjk3NTMyMzU5LCJpYXQiOjE2OTc1Mjg3NTksInNjb3BlIjoicmVhZCJ9.OcXZ046GQQ6xk3LvcJkurn2E1to1PlQ4RrVRjtCAbFe-MA2MVw6J-tYFzUf0mhY9LtjsnLhMvWvFydYg5VUeWiIA9aujL9gi7SmsiRoQyU_W2QWF1y4SraQ2fOz4nzRiDa4kohyDJJu8rjHNJ1m0eyeiIrg231SB6gEQEFf59YG8oKRw9XLqf17XIB6jmmUAzK5qCgyIEG0LSC7cyaE68DYVimglcdVafG1mVo7IvfmF0E1kUFy3O6G5_I6U0MbeQp6Sd0-F61qC_-d0mnGJlv-3MreEO0RfREAHYPqZM9NEni5LF_pbcC58McDRzCW7FLWyxgdAfCif_jOFQKMwSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibHV2aW5hIiwiZXhwIjoxNjk3NTMyMzU5LCJpYXQiOjE2OTc1Mjg3NTksInNjb3BlIjoicmVhZCJ9.OcXZ046GQQ6xk3LvcJkurn2E1to1PlQ4RrVRjtCAbFe-MA2MVw6J-tYFzUf0mhY9LtjsnLhMvWvFydYg5VUeWiIA9aujL9gi7SmsiRoQyU_W2QWF1y4SraQ2fOz4nzRiDa4kohyDJJu8rjHNJ1m0eyeiIrg231SB6gEQEFf59YG8oKRw9XLqf17XIB6jmmUAzK5qCgyIEG0LSC7cyaE68DYVimglcdVafG1mVo7IvfmF0E1kUFy3O6G5_I6U0MbeQp6Sd0-F61qC_-d0mnGJlv-3MreEO0RfREAHYPqZM9NEni5LF_pbcC58McDRzCW7FLWyxgdAfCif_jOFQKMwSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-TenantID",
+						"value": "tenant_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
